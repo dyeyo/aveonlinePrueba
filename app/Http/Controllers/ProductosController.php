@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ProductosRequest;
 use App\producto;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
@@ -20,7 +21,7 @@ class productosController extends Controller
         return view('producto.create');
     }
 
-    public function store(Request $request)
+    public function store(ProductosRequest $request)
     {
 
         /*$request->validate([
